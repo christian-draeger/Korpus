@@ -8,6 +8,9 @@ ktor:
   deployment:
     host: 127.0.0.1
     port: "$PORT:8080"
+    watch:
+      - classes
+      - resources
 
   logger:
     level: "$KTOR_LOGGER_LEVEL_INFO:INFO"

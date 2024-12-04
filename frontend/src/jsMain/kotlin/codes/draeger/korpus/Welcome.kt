@@ -55,7 +55,7 @@ val Welcome = FC<WelcomeProps> { props ->
                 lineHeight = 32.px
             }
 
-            +"Kotlin kRPC Sample"
+            +"Project Korpus"
         }
     }
 

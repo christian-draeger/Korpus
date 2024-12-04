@@ -1,0 +1,13 @@
+ktor:
+  environment: "$KTOR_ENV:development"
+
+  application:
+    modules:
+      - codes.draeger.korpus.ApplicationKt.module
+
+  deployment:
+    host: 127.0.0.1
+    port: "$PORT:8080"
+
+  logger:
+    level: "$KTOR_LOGGER_LEVEL_INFO:INFO"

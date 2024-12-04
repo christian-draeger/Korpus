@@ -1,7 +1,3 @@
-/*
- * Copyright 2023-2024 JetBrains s.r.o and contributors. Use of this source code is governed by the Apache 2.0 license.
- */
-
 plugins {
     kotlin("jvm")
     alias(libs.plugins.kotlin.plugin.serialization)
@@ -11,8 +7,9 @@ plugins {
 
 group = "codes.draeger.korpus"
 version = "1.0.0"
+
 application {
-    mainClass.set("codes.draeger.korpus.ApplicationKt")
+    mainClass.set("io.ktor.server.cio.EngineMain")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=${extra["io.ktor.development"] ?: "false"}")
 }
 
@@ -26,6 +23,7 @@ dependencies {
     implementation(libs.ktor.server.core.jvm)
     implementation(libs.ktor.server.cors.jvm)
     implementation(libs.ktor.server.websockets.jvm)
+    implementation(libs.ktor.server.config.yaml)
 
     implementation(libs.kotlinx.coroutines.core.jvm)
     implementation(libs.logback.classic)

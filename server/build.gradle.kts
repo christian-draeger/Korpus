@@ -24,12 +24,15 @@ dependencies {
     implementation(libs.ktor.server.cors.jvm)
     implementation(libs.ktor.server.websockets.jvm)
     implementation(libs.ktor.server.config.yaml)
+    implementation(libs.ktor.server.html.builder)
 
     implementation(libs.kotlinx.coroutines.core.jvm)
     implementation(libs.logback.classic)
 
     implementation(libs.kotlinx.rpc.krpc.ktor.server)
     implementation(libs.kotlinx.rpc.krpc.serialization.json)
+
+    implementation(libs.kotlinwind)
 
     testImplementation(libs.kotlinx.rpc.krpc.client)
     testImplementation(libs.kotlinx.rpc.krpc.ktor.client)

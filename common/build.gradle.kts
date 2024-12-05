@@ -18,6 +18,8 @@ kotlin {
             implementation(libs.ktor.client.core)
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.kotlinx.rpc.core)
+            implementation(libs.kotlinx.html)
+            // implementation(libs.kotlinwind)
         }
     }
 }

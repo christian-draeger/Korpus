@@ -1,11 +1,18 @@
 package codes.draeger.korpus
 
+import io.github.allangomes.kotlinwind.css.I50
+import io.github.allangomes.kotlinwind.css.I500
+import io.github.allangomes.kotlinwind.css.kw
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.cio.*
+import io.ktor.server.html.*
 import io.ktor.server.http.content.*
 import io.ktor.server.plugins.cors.routing.*
 import io.ktor.server.routing.*
+import kotlinx.html.body
+import kotlinx.html.div
+import kotlinx.html.style
 import kotlinx.rpc.krpc.ktor.server.RPC
 import kotlinx.rpc.krpc.ktor.server.rpc
 import kotlinx.rpc.krpc.serialization.json.json
@@ -27,6 +34,21 @@ fun Application.module() {
             }
 
             registerService<MyService> { ctx -> MyServiceImpl(ctx) }
+        }
+
+        get("/inline-style") {
+            call.respondHtml(HttpStatusCode.OK) {
+                body {
+                    div {
+                        style = kw.inline {
+                            height["100vh"]
+                            background.gray[I50]
+                            text.red[I500].middle.center
+                        }
+                        +"Styled with Kotlinwind.css"
+                    }
+                }
+            }
         }
 
         staticResources("/", "/static") {

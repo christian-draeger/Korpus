@@ -1,5 +1,20 @@
-# Ktor Web App
-Sample application with Kotlin/Js on frontend and Kotlin/Jvm on backend,that uses kRPC with Ktor to communicate.
+# Korpus
+A Kotlin multiplatform project trying to create a smooth fullstack webapp development experience.
+
+The Application uses Kotlin/Js on frontend and Kotlin/Jvm on backend,that uses kRPC with Ktor to communicate.
+
+- [x] Ktor Server (Kotlin/Jvm)
+    - [x] kRPC
+    - [x] templating with kotlinx-html and kotlinwind.css
+- [x] Frontend (Kotlin/Js)
+    - [x] kRPC
+    - [x] react
+    - [x] emotion css
+    - [ ] kotlinwind.css
+- [x] Common code 
+    - [x] kRPC
+    - [x] kotlinx-html
+    - [ ] kotlinwind.css
 
 ### Running frontend
 To run frontend in development mode, run this command:

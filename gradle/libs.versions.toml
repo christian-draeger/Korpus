@@ -6,6 +6,7 @@ kotlinx-serialization-json = "1.7.3"
 kotlinx-coroutines-core = "1.9.0"
 logback = "1.5.12"
 kotlinx-rpc = "0.4.0"
+kotlinwind = "0.0.4"
 
 [libraries]
 # kotlin
@@ -48,6 +49,9 @@ kotlinx-rpc-krpc-server = { module = "org.jetbrains.kotlinx:kotlinx-rpc-krpc-ser
 kotlinx-rpc-krpc-ktor-client = { module = "org.jetbrains.kotlinx:kotlinx-rpc-krpc-ktor-client", version.ref = "kotlinx-rpc" }
 kotlinx-rpc-krpc-ktor-server = { module = "org.jetbrains.kotlinx:kotlinx-rpc-krpc-ktor-server", version.ref = "kotlinx-rpc" }
 kotlinx-rpc-krpc-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-rpc-krpc-serialization-json", version.ref = "kotlinx-rpc" }
+
+# styling
+kotlinwind = { module = "io.github.allangomes:kotlinwind-css", version.ref = "kotlinwind" }
 
 [plugins]
 kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

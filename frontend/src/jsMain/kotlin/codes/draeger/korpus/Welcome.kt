@@ -50,6 +50,8 @@ val Welcome = FC<WelcomeProps> { props ->
         }
 
         div {
+            // TODO: figure out how to use kotlinwind
+            // className = kw.inline { text.red[I950].middle.center }
             css {
                 fontSize = 32.px
                 lineHeight = 32.px

@@ -30,7 +30,9 @@ kotlin {
                 implementation(project.dependencies.platform(libs.kotlin.wrappers.bom))
                 implementation(libs.react)
                 implementation(libs.react.dom)
+
                 implementation(libs.emotion)
+                implementation(libs.kotlinwind)
             }
         }
     }

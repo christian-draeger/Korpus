@@ -40,15 +40,15 @@ dependencies {
     testImplementation(libs.ktor.server.test.host)
 }
 
-val buildAndCopyFrontend = tasks.register<Copy>("buildAndCopyFrontend") {
-    val frontendDist = project(":frontend").tasks.named("jsBrowserProductionWebpack")
-    dependsOn(frontendDist)
-    from(frontendDist)
-    into("${project.projectDir}/src/main/resources/static")
+val buildAndCopyClientKt = tasks.register<Copy>("buildAndCopyClientKt") {
+    val clientDist = project(":client-kt").tasks.named("jsBrowserProductionWebpack").get()
+    dependsOn(clientDist)
+    from(clientDist)
+    into("${project.projectDir}/src/main/resources/static/client-kt")
 }
 
 val prepareAppResources = tasks.register("prepareAppResources") {
-    dependsOn(buildAndCopyFrontend)
+    dependsOn(buildAndCopyClientKt)
     finalizedBy("processResources")
 }
 

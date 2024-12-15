@@ -6,4 +6,4 @@
 
 local.properties
 server/src/main/resources/static/*
-!server/src/main/resources/static/index.html
+!server/src/main/resources/static/client-kt/index.html

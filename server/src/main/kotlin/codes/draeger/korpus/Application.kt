@@ -51,7 +51,7 @@ fun Application.module() {
             }
         }
 
-        staticResources("/", "/static") {
+        staticResources("/", "/static/client-kt") {
             default("index.html")
         }
     }

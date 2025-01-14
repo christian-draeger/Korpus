@@ -5,16 +5,18 @@ The Application uses Kotlin/Js on frontend and Kotlin/Jvm on backend,that uses k
 
 - [x] Ktor Server (Kotlin/Jvm)
     - [x] kRPC
-    - [x] templating with kotlinx-html and kotlinwind.css
+    - [x] kotlinx-html
+    - [x] kotlinwind.css
 - [x] Frontend (Kotlin/Js)
     - [x] kRPC
     - [x] react
     - [x] emotion css
-    - [ ] kotlinwind.css
+    - [x] kotlinx-html
+    - [x] kotlinwind.css
 - [x] Common code 
     - [x] kRPC
     - [x] kotlinx-html
-    - [ ] kotlinwind.css
+    - [x] kotlinwind.css
 
 ### Running frontend
 To run frontend in development mode, run this command:

@@ -46,6 +46,7 @@ val Welcome = FC<WelcomeProps> { props ->
     val articles = useArticles(props.service)
 
     div {
+
         css {
             display = Display.flex
             flexDirection = FlexDirection.row
@@ -58,7 +59,7 @@ val Welcome = FC<WelcomeProps> { props ->
                 lineHeight = 32.px
             }
 
-            +"Project Korpus (try kotlinwind: ${kw.inline { text.middle }})"
+            +"Project Korpus"
         }
     }
 

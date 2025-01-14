@@ -1,6 +1,9 @@
 package codes.draeger.korpus
 
 import emotion.react.css
+import io.github.allangomes.kotlinwind.css.kw
+import kotlinx.html.body
+import kotlinx.html.stream.createHTML
 import kotlinx.rpc.krpc.streamScoped
 import react.FC
 import react.Props
@@ -43,6 +46,7 @@ val Welcome = FC<WelcomeProps> { props ->
     val articles = useArticles(props.service)
 
     div {
+
         css {
             display = Display.flex
             flexDirection = FlexDirection.row
@@ -50,8 +54,6 @@ val Welcome = FC<WelcomeProps> { props ->
         }
 
         div {
-            // TODO: figure out how to use kotlinwind
-            // className = kw.inline { text.red[I950].middle.center }
             css {
                 fontSize = 32.px
                 lineHeight = 32.px
@@ -59,6 +61,14 @@ val Welcome = FC<WelcomeProps> { props ->
 
             +"Project Korpus"
         }
+    }
+
+    div {
+        +"text.middle compiled by kotlinwind: ${kw.inline { text.middle }})"
+    }
+
+    div {
+        +"shared component with styling: ${createHTML().body { sharedViewComponentWithStyling() }}"
     }
 
     div {

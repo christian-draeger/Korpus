@@ -51,6 +51,14 @@ fun Application.module() {
             }
         }
 
+        get("/inline-style-shared") {
+            call.respondHtml(HttpStatusCode.OK) {
+                body {
+                    sharedViewComponentWithStyling()
+                }
+            }
+        }
+
         staticResources("/", "/static") {
             default("client-kt.html")
         }

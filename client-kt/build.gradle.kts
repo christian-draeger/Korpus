@@ -34,7 +34,7 @@ kotlin {
                 implementation(libs.kotlinx.html.js)
 
                 implementation(libs.emotion)
-                // implementation(libs.kotlinwind)
+                implementation(libs.kotlinwindJs)
             }
         }
     }

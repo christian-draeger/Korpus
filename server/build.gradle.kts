@@ -32,7 +32,7 @@ dependencies {
     implementation(libs.kotlinx.rpc.krpc.ktor.server)
     implementation(libs.kotlinx.rpc.krpc.serialization.json)
 
-    implementation(libs.kotlinwind)
+    implementation(libs.kotlinwindJvm)
 
     testImplementation(libs.kotlinx.rpc.krpc.client)
     testImplementation(libs.kotlinx.rpc.krpc.ktor.client)
